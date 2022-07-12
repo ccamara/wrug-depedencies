@@ -1,0 +1,36 @@
+---
+title: "Managing project dependencies"
+subtitle: "Warwick R user group"
+author: "Carlos Cámara-Menoyo"
+institute: "Centre for Interdisciplinary Methodologies"
+# date: "08/12/2020"
+output:
+  xaringan::moon_reader:
+    # css: ["default", "extra.css"]
+    css: ["css/warwick.scss", "css/warwick-fonts.scss", "default", "widths.css"]
+    seal: true #Set false to remove default title slide.
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      # titleSlideClass: ["right", "top", "my-title"]
+    yolo: false
+---
+
+```{r setup, echo=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+
+# Xaringan Extra configuration. +info: https://pkg.garrickadenbuie.com/xaringanExtra
+xaringanExtra::use_tile_view()
+xaringanExtra::use_broadcast()
+# xaringanExtra::use_scribble()
+xaringanExtra::use_clipboard()
+xaringanExtra::use_fit_screen() # Press ALT/Option+F
+xaringanExtra::use_tachyons()
+xaringanExtra::use_panelset()
+xaringanExtra::use_progress_bar(color = "#552D62", location = "bottom")
+
+```
+
+
+Some slides

@@ -1,0 +1,104 @@
+// Warwick colors:
+$w_aubergine: #552D62;
+$w_grey: #393A3B;
+$w_ruby_red: #9A1310;
+$w_sky_blue: #00407A;
+
+$color-primary: $w_aubergine;
+$color-secondary: $w_grey;
+
+body {
+  color: $w_grey;
+  //color: rgb(56, 56, 56);
+}
+
+a {
+  color: $color-primary;
+  text-decoration: underline;
+  &:hover {
+    color: white;
+    background-color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+.remark-container {
+  background: rgba($color-primary,0.05);
+}
+
+/* Slide types */
+
+.title-slide, 
+.slide-primary,
+.slide-secondary {
+  h1, h2, h3 {
+    text-shadow: rgba($w_grey,.4)0 3px 3px;
+  }
+  
+  a {
+    color: white !important;
+    &:hover {
+      background-color: white;
+      color: $color-primary !important;
+    }
+  }
+}
+
+.title-slide {
+  h2, h3 {
+    font-size: 120%;
+  }
+}
+
+.slide-primary, .title-slide {
+  background-color: $color-primary;
+  color: white;
+}
+
+.slide-secondary {
+  background-color: $color-secondary;
+  color: white;
+}
+
+.interaction {
+  //background-color: rgba($w_grey,.5);
+  background-color: #9B9C9C;
+  color: white;
+  
+  a {
+    color: white !important;
+    &:hover {
+      background-color: white;
+      color: $color-primary !important;
+    }
+  }
+}
+
+/* Title slide */
+
+/* Add image and change bg color */
+.title-slide {
+  //background-image: url("/css/UofW_logo.jpg");
+  background-image: url("https://avatars.githubusercontent.com/u/45662315?s=200&v=4");
+  background-position: 95% 15%;
+  background-size: 100px;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+  
+  h1, h2, h3, p {
+    text-align: left;
+  }
+  
+  h3 {
+    font-weight: 400;
+  }
+}
+
+.highlight {
+  background: rgba($color-primary, 0.25);
+  color: $w-grey;
+}
+
+code {
+  max-height: 550px;
+}
+
