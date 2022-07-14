@@ -144,7 +144,6 @@ class: interaction
 
 ```{r echo=FALSE, fig.height=4.5, fig.width=11, message=FALSE}
 library(ggplot2)
-library(ggannotate)
 library(tidyr)
 library(dplyr)
 library(lubridate)
