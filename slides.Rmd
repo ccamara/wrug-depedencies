@@ -136,7 +136,8 @@ class: interaction
 
 ## Case: reproducing this `Rmd` file
 
-* Xaringan Slides "on steroids" (i.e. `{xaringanExtra}`)
+* Source code: https://github.com/ccamara/wrug-depedencies/blob/main/slides.Rmd 
+* Xaringan Slides "on steroids" (i.e. `{xaringanExtra}`) 
 * This simple plot:
 
 .panelset[
@@ -306,11 +307,6 @@ layout:false
     -   circular referencing ?
 ]
 
----
-
-## Groundhog
-
-Similar approach to automagic, but it makes possible **having different versions of the same packages**.
 
 ---
 
