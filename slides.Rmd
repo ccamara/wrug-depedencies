@@ -137,8 +137,7 @@ class: interaction
 ## Case: reproducing this `Rmd` file
 
 * Source code: https://github.com/ccamara/wrug-depedencies/blob/main/slides.Rmd 
-* Xaringan Slides "on steroids" (i.e. `{xaringanExtra}`) 
-* This simple plot:
+* Xaringan Slides "on steroids" (i.e. `{xaringanExtra}`)  + This simple plot:
 
 .panelset[
 .panel[.panel-name[Code]
@@ -432,11 +431,11 @@ layout: false
 .pull-left[
 **Pros:**
 
--   Robust solution
+-   Robust solution: dependencies are properly detected
 -   Well integrated within the RStudio ecosystem and IDE
+-   Great documentation and usage (_de facto_ standard )
 -   Isolated environments
   -   Different versions of same packages in different projects
-
 ]
 
 -- 
@@ -446,7 +445,7 @@ layout: false
 
 -   More complex than `{automagic}`
   - More steps involved
-  - `renv.lock` is more verbose than `deps.yml`
+  - `renv.lock` is more verbose than `deps.yml` (825 lines vs 41)
 -   More resource hungry (hard disk)
   - You may have `{dplyr}` (and all its dependencies!) installed a dozen times! 
 ]
@@ -455,15 +454,12 @@ layout: false
 
 class: slide-primary
 
-## Conclusions
-
-
 .pull-left[
 
-### Wrap up...
+## Conclusions
 
 * Packages (and versions!) need to be stored and shared
-  * Avoid not being able to reproduce something because of missing packages
+  * Prevent not being able to reproduce something because of missing packages
   * Makes installation easier (run one command vs having to discover missing packages because of errors)
   * Minimises the _"Works on my computer effect"_
 * Several options in R
@@ -478,11 +474,11 @@ class: slide-primary
 
 .pull-right[
 
-### Limitations
+## Limitations
 
 None of those methods are panacea:
 
-* All these options will recreate .highlight[R packages only]
+* All these options will recreate **R packages only**
   * No external libraries needed by packages
   * No binaries (i.e., Quarto)
   * No other programming language
