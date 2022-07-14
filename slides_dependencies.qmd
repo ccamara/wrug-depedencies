@@ -1,0 +1,160 @@
+---
+title: "Managing project dependencies"
+author: 
+  - name: "Carlos Cámara-Menoyo"
+    url: http://carloscamara.es/en
+    affiliation: University of Warwick (CIM)
+    affiliation-url: http://warwick.ac.uk/cim
+    orcid: 0000-0002-9378-0549
+institute: "Centre for Interdisciplinary Methodologies"
+title-slide-attributes:
+    # data-background-image: "url"
+    # data-background-size: contain
+    # data-background-opacity: "0.45"
+    data-background-color: "#3d9ed5"
+format: 
+  revealjs:
+    logo: img/logo_small.png
+    preview-links: true
+editor: visual
+---
+
+## Carlos Cámara-Menoyo{background-color="black" background-image="https://slides.carloscamara.es/img/about-me/hackaton-cadaveres-inmobiliarios.jpg" background-opacity="0.75"}
+
+
+https://carloscamara.es/en | @drccamara
+
+## Reproducibility
+
+---
+
+## {background-image="https://slides.carloscamara.es/img/questions/travolta-question.gif"}
+
+---
+
+### Definition
+
+We can think of this in two ways:
+
+-   *replication*: the ability to recreate the same results using the same method,
+
+-   *reproducibility*: the ability to use the same method with different data.
+
+In order to achieve both, we need to replicate the same conditions. This includes:
+
+Either case, it is not binary, but a gradient
+
+Gradient image
+
+In this session we will be focusing on the first bit: reproducing project dependencies.
+
+------------------------------------------------------------------------
+
+## Managing project dependencies
+
+Each programming language deals with managing dependencies differently
+
+-   PHP: composer
+
+-   Python:
+
+    -   virtual environments
+
+    -   conda environments
+
+-   R several:
+
+    -   automagic
+
+    -   groundhog
+
+    -   renv
+
+---
+
+### But...
+
+1.  Create a snapshot listing dependencies used
+
+2.  Recreate dependencies from snapshot
+
+3.  (optional): Update packages and update snapshot (#1)
+
+---
+
+## Why?
+
+## Automagic
+
+Simple, efficient approach. Easy to use: it "just works". Just 7 functions, but you will only be using 2 of them most of the time.
+
+-   Developed by
+
+-   Repo
+
+------------------------------------------------------------------------
+
+### How it works:
+
+1.  You run the command `automagic::generate()` a yaml file called `deps.yaml` with your dependencies.
+2.  Y ou run the command `automagic::automagic()` to automagically install the packages specified in `deps.yaml.`
+
+Actually, it's slighly more complex than that:
+
+1.  install automagic
+2.  You run the command `automagic::generate()` a yaml file called `deps.yaml` with your dependencies.
+3.  You distribute `deps.yaml` with your project (i.e., git)
+4.  Y ou run the command `automagic::automagic()` to automagically install the packages specified in `deps.yaml.`
+
+If you want to update your packages:
+
+------------------------------------------------------------------------
+
+Automagic wrap up
+
+::: columns
+::: {.column width="50%"}
+**Pros:**
+
+-   It does what promised (name makes justice!)
+
+-   Small package, few commands
+
+-   Packages are shared between different R projects
+
+    -   Saves disk space
+:::
+
+::: {.column width="50%"}
+**Cons:**
+
+-   Packages **and versions** are shared between projects
+
+    -   No way go get different versions for different projects
+
+-   Requires automagic previously installed to make it work:
+
+    -   circular referencing ?
+:::
+:::
+
+## Groundhog
+
+Similar approach to automagic, but it makes possible **having different versions of the same packages**.
+
+## Renv
+
+Let's practice!
+
+1.  Clone wrug website
+2.  
+
+### But...
+
+Try to reproduce these slides.
+
+They work on my laptop, but not in yours.
+
+This is because I'm using Quarto, which is not an R package. It's a binary.
+
+None of the previous solutions work for this.
